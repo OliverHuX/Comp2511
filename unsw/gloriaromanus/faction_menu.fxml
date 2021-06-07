@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Background?>
+<?import javafx.scene.layout.BackgroundFill?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxWidth="250.0" prefHeight="600.0" prefWidth="249.0" spacing="10" styleClass="panel-region" stylesheets="/unsw/gloriaromanus/style.css" StackPane.alignment="TOP_LEFT" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unsw.gloriaromanus.FactionMenuController">
+    <padding>
+        <Insets topRightBottomLeft="10" />
+    </padding>
+    <background>
+        <Background>
+            <fills>
+                <BackgroundFill>
+                    <fill>
+                        <Color opacity="0.3" />
+                    </fill>
+                </BackgroundFill>
+            </fills>
+        </Background>
+    </background>
+   <HBox prefHeight="50.0" prefWidth="229.0">
+      <children>
+          <Button onAction="#toProvinceMenus" prefHeight="27.0" prefWidth="135.0" text="GOTO Province" />
+         <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Turn" wrappingWidth="40.25732421875">
+            <HBox.margin>
+               <Insets left="40.0" />
+            </HBox.margin>
+            <font>
+               <Font name="Arial Black" size="15.0" />
+            </font>
+         </Text>
+         <TextField fx:id="turn" prefHeight="27.0" prefWidth="67.0" />
+      </children>
+   </HBox>
+   <Text fx:id="faction_name" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="FactionName" textAlignment="CENTER" wrappingWidth="205.22900390625">
+      <font>
+         <Font name="Apple LiGothic Medium" size="42.0" />
+      </font>
+   </Text>
+   <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Information">
+      <font>
+         <Font name="Apple SD Gothic Neo Regular" size="27.0" />
+      </font>
+   </Text>
+   <VBox prefHeight="246.0" prefWidth="321.0">
+      <children>
+         <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ProvinceNumber" wrappingWidth="136.61572265625">
+            <font>
+               <Font size="17.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+         </Text>
+         <TextField fx:id="province_num" editable="false" prefHeight="27.0" prefWidth="260.0">
+            <VBox.margin>
+               <Insets bottom="15.0" />
+            </VBox.margin>
+         </TextField>
+         <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Treasury">
+            <font>
+               <Font size="17.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+         </Text>
+         <TextField fx:id="treasury" editable="false" prefHeight="27.0" prefWidth="337.0">
+            <VBox.margin>
+               <Insets bottom="15.0" />
+            </VBox.margin>
+         </TextField>
+         <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Wealth">
+            <font>
+               <Font size="17.0" />
+            </font>
+         </Text>
+         <TextField fx:id="wealth" editable="false" prefHeight="27.0" prefWidth="161.0">
+            <VBox.margin>
+               <Insets bottom="15.0" />
+            </VBox.margin>
+         </TextField>
+         <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Goals">
+            <font>
+               <Font name="Apple SD Gothic Neo Regular" size="27.0" />
+            </font>
+         </Text>
+      </children>
+   </VBox>
+   <TextArea fx:id="goals" prefHeight="115.0" prefWidth="229.0" />
+   <Pane prefHeight="118.0" prefWidth="206.0">
+      <children>
+         <Button layoutY="6.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="92.0" text="Diplomacy"  onAction="#toDiplomacyMenus"/>
+         <Button fx:id="EndTurn" layoutX="137.0" layoutY="6.0" mnemonicParsing="false" onAction="#handleEndTurn" prefHeight="48.0" prefWidth="92.0" text="End Turn" />
+         <Button layoutY="67.0" mnemonicParsing="false" onAction="#saveGame" prefHeight="27.0" prefWidth="229.0" text="Save" />
+      </children>
+   </Pane>
+</VBox>

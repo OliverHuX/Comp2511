@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="798.0" styleClass="background" stylesheets="/unsw/gloriaromanus/image.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <effect>
+      <Lighting>
+         <bumpInput>
+            <Shadow />
+         </bumpInput>
+         <light>
+            <Light.Distant />
+         </light>
+      </Lighting>
+   </effect>
+   <children>
+      <Text layoutX="217.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Factions">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Text>
+      <Pane layoutX="25.0" layoutY="59.0" prefHeight="84.0" prefWidth="380.0">
+         <children>
+            <Circle fx:id="CelticBritons" fill="DODGERBLUE" layoutX="346.0" layoutY="39.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="Rome" fill="#1f93ff" layoutX="39.0" layoutY="39.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" styleClass="romeIcon" />
+            <Circle fx:id="Gallic" fill="#1f93ff" layoutX="242.0" layoutY="39.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" styleClass="romeIcon" />
+            <Circle fx:id="Spanish" fill="DODGERBLUE" layoutX="139.0" layoutY="39.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+         </children></Pane>
+      <Pane layoutX="14.0" layoutY="132.0" prefHeight="112.0" prefWidth="200.0">
+         <children>
+            <Text fill="#e4d5ba" layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player1">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Text>
+            <Text fill="#ffeded" layoutX="14.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose your factions" />
+            <ChoiceBox fx:id="player1Faction" layoutX="14.0" layoutY="63.0" prefWidth="150.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="244.0" prefHeight="112.0" prefWidth="200.0">
+         <children>
+            <Text fill="#e4d5ba" layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player2">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Text>
+            <ChoiceBox fx:id="player2Faction" layoutX="14.0" layoutY="62.0" prefWidth="150.0" />
+            <Text fill="#ffeded" layoutX="14.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose your factions" />
+         </children>
+      </Pane>
+      <Pane layoutX="166.0" layoutY="132.0" prefHeight="112.0" prefWidth="200.0">
+         <children>
+            <Text fill="#e4d5ba" layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player3">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Text>
+            <Text fill="#ffeded" layoutX="14.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose your factions" />
+            <ChoiceBox fx:id="player3Faction" layoutX="14.0" layoutY="63.0" prefWidth="150.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="166.0" layoutY="244.0" prefHeight="112.0" prefWidth="200.0">
+         <children>
+            <Text fill="#e4d5ba" layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player4">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Text>
+            <ChoiceBox fx:id="player4Faction" layoutX="14.0" layoutY="62.0" prefWidth="150.0" />
+            <Text fill="#ffeded" layoutX="14.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose your factions" />
+         </children>
+      </Pane>
+      <Pane layoutX="366.0" layoutY="125.0" prefHeight="238.0" prefWidth="200.0">
+         <children>
+            <Text fill="#e4d5ba" layoutX="6.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Setting">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Text>
+            <Text fill="#ffeded" layoutX="6.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GoldCoins" />
+            <ChoiceBox fx:id="initialTreasury" layoutY="66.0" prefWidth="150.0" />
+            <ChoiceBox fx:id="initialWealth" layoutY="126.0" prefWidth="150.0" />
+            <Text fill="#ffeded" layoutX="6.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wealth" />
+         </children>
+      </Pane>
+      <Button fx:id="startGame" cache="true" cacheShape="false" layoutX="687.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleStartNewGame" prefHeight="49.0" prefWidth="77.0" text="Start" textOverrun="CLIP">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="S_RESIZE" />
+         </cursor>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="back" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleBack" text="Back">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Pane layoutX="568.0" layoutY="124.0" prefHeight="262.0" prefWidth="216.0">
+         <children>
+            <Text fill="#e4d5ba" layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goals" wrappingWidth="77.0">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Text>
+            <CheckBox fx:id="WealthGoal" layoutX="15.0" layoutY="61.0" mnemonicParsing="false" onAction="#handleWealthBox" prefHeight="27.0" prefWidth="76.0" text="Wealth" textFill="#ffeded">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="TreasuryGoal" layoutX="15.0" layoutY="97.0" mnemonicParsing="false" onAction="#handleTreasuryBox" prefHeight="27.0" prefWidth="93.0" text="Treasury" textFill="#ffeded">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ConquestGoal" layoutX="15.0" layoutY="135.0" mnemonicParsing="false" onAction="#handleConquestBox" prefHeight="27.0" prefWidth="106.0" text="Conquest" textFill="#ffeded">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="RandomGoal" layoutX="15.0" layoutY="172.0" mnemonicParsing="false" onAction="#handleRandomBox" prefHeight="27.0" prefWidth="76.0" text="Random" textFill="#ffeded">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <ChoiceBox fx:id="firstLogic" layoutX="108.0" layoutY="75.0" prefHeight="17.0" prefWidth="77.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ChoiceBox>
+            <ChoiceBox fx:id="secondLogic" layoutX="109.0" layoutY="124.0" prefHeight="27.0" prefWidth="77.0" />
+            <Text fill="#ffeded" layoutX="108.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logical conjunction" wrappingWidth="115.197265625" />
+            <TextField fx:id="order" editable="false" layoutX="-8.0" layoutY="222.0" prefHeight="27.0" prefWidth="224.0" />
+            <Text fill="#e4d5ba" layoutX="-7.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You select the following order" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
