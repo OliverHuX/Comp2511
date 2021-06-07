@@ -1,0 +1,36 @@
+{ "command": "flight", "id": "flight1", "dropzone": "Picton", "starttime": "2007-12-02T10:15", "endtime": "2007-12-02T10:35", "maxload": 4 }
+{ "command": "flight", "id": "flight2", "dropzone": "Picton", "starttime": "2007-12-02T10:25", "endtime": "2007-12-02T10:40", "maxload": 5 }
+{ "command": "flight", "id": "flight3", "dropzone": "Picton", "starttime": "2007-12-02T10:40", "endtime": "2007-12-02T11:00", "maxload": 5 }
+{ "command": "flight", "id": "flight4", "dropzone": "Picton", "starttime": "2007-12-02T12:40", "endtime": "2007-12-02T13:00", "maxload": 5 }
+{ "command": "flight", "id": "flight5", "dropzone": "Picton", "starttime": "2007-12-02T13:40", "endtime": "2007-12-02T14:00", "maxload": 5 }
+{ "command": "flight", "id": "flight6", "dropzone": "Picton", "starttime": "2007-12-02T14:40", "endtime": "2007-12-02T15:00", "maxload": 5 }
+{ "command": "flight", "id": "flight7", "dropzone": "Picton", "starttime": "2007-12-03T12:40", "endtime": "2007-12-03T13:00", "maxload": 3 }
+{ "command": "flight", "id": "flight8", "dropzone": "Picton", "starttime": "2007-12-03T12:40", "endtime": "2007-12-03T13:00", "maxload": 4 }
+
+{ "command": "skydiver", "skydiver": "Mat", "licence": "licenced-jumper"}
+{ "command": "skydiver", "skydiver": "Jack", "licence": "student"}
+{ "command": "skydiver", "skydiver": "Apple", "licence": "tandem-master", "dropzone": "Picton"}
+{ "command": "skydiver", "skydiver": "Orange", "licence": "tandem-master", "dropzone": "Picton"}
+{ "command": "skydiver", "skydiver": "Coconat", "licence": "tandem-master", "dropzone": "Picton"}
+{ "command": "skydiver", "skydiver": "Banana", "licence": "instructor", "dropzone": "Picton"}
+
+{ "command": "request", "type": "fun", "id": "Apple jumped once", "starttime": "2007-12-02T12:40", "skydivers": ["Apple"] }
+{ "command": "request", "type": "fun", "id": "Apple jumped twice", "starttime": "2007-12-02T13:40", "skydivers": ["Apple"] }
+{ "command": "cancel", "id": "Apple jumped twice" }
+{ "command": "request", "type": "fun", "id": "Apple wants to jump twice again", "starttime": "2007-12-02T13:40", "skydivers": ["Apple"] }
+{ "command": "request", "type": "fun", "id": "Jack wants to have fun, but Jack doesn't have license", "starttime": "2007-12-02T10:15", "skydivers": ["Jack"] }
+{ "command": "request", "type": "tandem", "id": "Mat wants to learn, Orange should be the master", "starttime": "2007-12-02T10:35", "passenger": "Mat" }
+{ "command": "request", "type": "training", "id": "Banana arrives for training, Coconat could be the trainer", "starttime": "2007-12-02T10:15", "trainee": "Banana" }
+{ "command": "request", "type": "training", "id": "Banana arrives for training, Orange trains this time", "starttime": "2007-12-02T14:40", "trainee": "Banana" }
+{ "command": "change", "type": "fun", "id": "Apple wants to jump twice again", "starttime": "2007-12-02T13:40", "skydivers": ["Apple", "Coconat"] }
+{ "command": "request", "type": "fun", "id": "Mat's fun jump, should be allocated to flight8 since it has the most vacancies", "starttime": "2007-12-03T12:40", "skydivers": ["Mat"] }
+{ "command": "request", "type": "fun", "id": "Apple's fun jump, should be allocated to flight7 since it's regiestered first", "starttime": "2007-12-03T12:40", "skydivers": ["Apple"] }
+
+{ "command": "jump-run", "id": "flight1" }
+{ "command": "jump-run", "id": "flight2" }
+{ "command": "jump-run", "id": "flight3" }
+{ "command": "jump-run", "id": "flight4" }
+{ "command": "jump-run", "id": "flight5" }
+{ "command": "jump-run", "id": "flight6" }
+{ "command": "jump-run", "id": "flight7" }
+{ "command": "jump-run", "id": "flight8" }

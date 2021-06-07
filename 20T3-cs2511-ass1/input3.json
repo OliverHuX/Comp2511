@@ -1,0 +1,28 @@
+{ "command": "flight", "id": "flight1", "dropzone": "Picton", "starttime": "2007-12-02T10:15", "endtime": "2007-12-02T10:35", "maxload": 3 }
+{ "command": "flight", "id": "flight2", "dropzone": "Picton", "starttime": "2007-12-02T10:25", "endtime": "2007-12-02T10:40", "maxload": 1 }
+{ "command": "flight", "id": "flight3", "dropzone": "Picton", "starttime": "2007-12-02T10:40", "endtime": "2007-12-02T11:00", "maxload": 1 }
+{ "command": "flight", "id": "flight4", "dropzone": "Picton", "starttime": "2007-12-02T12:40", "endtime": "2007-12-02T13:00", "maxload": 1 }
+{ "command": "flight", "id": "flight5", "dropzone": "Picton", "starttime": "2007-12-02T13:40", "endtime": "2007-12-02T14:00", "maxload": 1 }
+{ "command": "flight", "id": "flight6", "dropzone": "Picton", "starttime": "2007-12-02T14:40", "endtime": "2007-12-02T15:00", "maxload": 5 }
+
+{ "command": "skydiver", "skydiver": "Matt", "licence": "licenced-jumper"}
+{ "command": "skydiver", "skydiver": "Jack", "licence": "student"}
+{ "command": "skydiver", "skydiver": "Apple", "licence": "tandem-master", "dropzone": "Picton"}
+{ "command": "skydiver", "skydiver": "Orange", "licence": "tandem-master", "dropzone": "Picton"}
+{ "command": "skydiver", "skydiver": "Coconat", "licence": "tandem-master", "dropzone": "Picton"}
+{ "command": "skydiver", "skydiver": "Borat", "licence": "instructor", "dropzone": "Picton"}
+
+{ "command": "request", "type": "fun", "id": "Apple jumped once", "starttime": "2007-12-02T12:40", "skydivers": ["Apple"] }
+{ "command": "request", "type": "fun", "id": "Apple, Orange and Coconat jump together", "starttime": "2007-12-02T10:15", "skydivers": ["Apple", "Orange", "Coconat"] }
+{ "command": "request", "type": "fun", "id": "Apple jumped twice", "starttime": "2007-12-02T13:40", "skydivers": ["Apple"] }
+{ "command": "request", "type": "fun", "id": "Jack wants to have fun, but Jack doesn't have license", "starttime": "2007-12-02T10:15", "skydivers": ["Jack"] }
+{ "command": "request", "type": "tandem", "id": "Matt wants to learn, Orange should be the master", "starttime": "2007-12-02T10:35", "passenger": "Matt" }
+{ "command": "request", "type": "training", "id": "Borat arrives for training, Coconat could be the trainer", "starttime": "2007-12-02T13:00", "trainee": "Borat" }
+{ "command": "request", "type": "training", "id": "Bruno wants another training eariler, but no more vacancy on any flights", "starttime": "2007-12-02T10:15", "trainee": "Borat" }
+
+{ "command": "jump-run", "id": "flight1" }
+{ "command": "jump-run", "id": "flight2" }
+{ "command": "jump-run", "id": "flight3" }
+{ "command": "jump-run", "id": "flight4" }
+{ "command": "jump-run", "id": "flight5" }
+{ "command": "jump-run", "id": "flight6" }
